@@ -279,9 +279,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .password-wrapper .form-control{padding-right: 40px;}
 
 .custom-card{padding: 26px 30px; border: 1px solid #EAEAEA; border-radius: 10px; height: 100%;}
-
-.page-title {padding-bottom: 25px;color: #4B4B4B;font-weight: 400;font-size: 30px;line-height: 34px;}
-
 /* Checkbox
 --------------------------------------------------------------------------------------------------------*/
 .form-check .form-check-input{margin-right: 9px;}
