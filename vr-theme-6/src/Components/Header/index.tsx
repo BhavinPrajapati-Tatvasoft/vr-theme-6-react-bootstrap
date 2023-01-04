@@ -1,9 +1,13 @@
+import Button from "react-bootstrap/esm/Button";
+
 const Header: React.FC = () => {
 
     return (
-        <>
-            <p>header</p>
-        </>
+        <header className="header">
+            <Button>
+                hamburger
+            </Button>
+        </header>
     )
 }
 export default Header;
