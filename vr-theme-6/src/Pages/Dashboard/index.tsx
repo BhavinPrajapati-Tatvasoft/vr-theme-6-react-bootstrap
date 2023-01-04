@@ -81,8 +81,8 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
-            <Col xs={12} lg={7}>
-              <div className="custom-card">
+            <Col xs={12} lg={7} className="mb-4">
+              <div className="custom-card weekly-report-card">
                 <div className="card-heading">
                   <h5 className="me-2">Weekly Report</h5>
                   <div className="graph-notation">
@@ -93,7 +93,7 @@ const Dashboard: React.FC = () => {
                 <WeeklyReport />
               </div>
             </Col>
-            <Col xs={12} lg={5}>
+            <Col xs={12} lg={5} className="mb-4">
               <div className="custom-card transaction-card">
                 <div className="card-heading">
                   <h5 className="me-2">Transaction</h5>

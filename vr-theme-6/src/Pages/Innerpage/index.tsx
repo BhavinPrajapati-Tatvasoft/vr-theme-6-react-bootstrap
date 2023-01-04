@@ -7,11 +7,16 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import { alertErrorIcon, alertInfoIcon, alertSuccessIcon, alertWarningIcon, hidePasswordIcon, uploadIcon } from "../../assets/images";
+import {
+  alertErrorIcon,
+  alertInfoIcon,
+  alertSuccessIcon,
+  alertWarningIcon,
+  hidePasswordIcon,
+  uploadIcon,
+} from "../../assets/images";
 import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-
-
 
 const Innerpage = () => {
   return (
@@ -49,7 +54,11 @@ const Innerpage = () => {
               label="Multiple  line"
               className="mb-3"
             >
-              <Form.Control type="text" placeholder="Multiple line" as="textarea" />
+              <Form.Control
+                type="text"
+                placeholder="Multiple line"
+                as="textarea"
+              />
             </FloatingLabel>
             {/* -------- first column end ---------  */}
 
@@ -92,7 +101,11 @@ const Innerpage = () => {
                   label="Error"
                   className="mb-3"
                 >
-                  <Form.Control type="text" placeholder="Error" value="Web Designer" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Error"
+                    value="Web Designer"
+                  />
                 </FloatingLabel>
               </Col>
             </Row>
@@ -117,7 +130,12 @@ const Innerpage = () => {
                   label="Disabled"
                   className="mb-3"
                 >
-                  <Form.Control type="text" placeholder="Disabled" value="John Doe" disabled />
+                  <Form.Control
+                    type="text"
+                    placeholder="Disabled"
+                    value="John Doe"
+                    disabled
+                  />
                 </FloatingLabel>
               </Col>
 
@@ -177,19 +195,27 @@ const Innerpage = () => {
                   label="Error"
                   className="mb-3"
                 >
-                  <Form.Control type="text" placeholder="Error" value="Web Designer" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Error"
+                    value="Web Designer"
+                  />
                 </FloatingLabel>
               </Col>
             </Row>
             {/* -------- four column end ---------  */}
-
 
             {/* -------- other design start ---------  */}
             <h5>Other Design elements</h5>
 
             <h6>File Upload</h6>
             <div className="file-upload-main">
-              <input type="file" name="Upload" id="upload" placeholder="Upload" />
+              <input
+                type="file"
+                name="Upload"
+                id="upload"
+                placeholder="Upload"
+              />
               <div className="file-content">
                 <img src={uploadIcon} alt="Upload Icon" />
                 <h4>Upload</h4>
@@ -237,25 +263,41 @@ const Innerpage = () => {
             <Row>
               <Col md={6}>
                 <Alert variant="danger" dismissible>
-                  <img src={alertErrorIcon} className="alert-icon" alt="Error Icon" />
+                  <img
+                    src={alertErrorIcon}
+                    className="alert-icon"
+                    alt="Error Icon"
+                  />
                   <p>This is an error Message</p>
                 </Alert>
               </Col>
               <Col md={6}>
                 <Alert variant="info" dismissible>
-                  <img src={alertInfoIcon} className="alert-icon" alt="Info Icon" />
+                  <img
+                    src={alertInfoIcon}
+                    className="alert-icon"
+                    alt="Info Icon"
+                  />
                   <p>This is an information message!</p>
                 </Alert>
               </Col>
               <Col md={6}>
                 <Alert variant="warning" dismissible>
-                  <img src={alertWarningIcon} className="alert-icon" alt="Warning Icon" />
+                  <img
+                    src={alertWarningIcon}
+                    className="alert-icon"
+                    alt="Warning Icon"
+                  />
                   <p>This is a warning message!</p>
                 </Alert>
               </Col>
               <Col md={6}>
                 <Alert variant="success" dismissible>
-                  <img src={alertSuccessIcon} className="alert-icon" alt="Success Icon" />
+                  <img
+                    src={alertSuccessIcon}
+                    className="alert-icon"
+                    alt="Success Icon"
+                  />
                   <p>This is a Success message!</p>
                 </Alert>
               </Col>
