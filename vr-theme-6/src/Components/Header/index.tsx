@@ -15,9 +15,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <Button className="primary-icon-button toggle-button">
+      <button className="primary-icon-button btn toggle-button">
         <img src={hamburgerIcon} alt="Hamburger" />
-      </Button>
+      </button>
       <a href="#" title="Company" className="logo">
         <img src={LogoBlack} alt="Company" className="d-none d-lg-block" />
         <img src={mobileLogo} alt="Company" className="d-block d-lg-none" />
@@ -25,16 +25,16 @@ const Header: React.FC = () => {
       <div className="right-content">
         <div className="search-wrapper">
           <Form.Control type="text" placeholder="Search" />
-          <Button>
+          <button className="btn">
             <img src={searchIcon} alt="Hamburger" />
-          </Button>
+          </button>
         </div>
-        <Button className="primary-icon-button">
+        <button className="primary-icon-button btn">
           <img src={messageIcon} alt="Hamburger" />
-        </Button>
-        <Button className="primary-icon-button">
+        </button>
+        <button className="primary-icon-button btn">
           <img src={notificationIcon} alt="Hamburger" />
-        </Button>
+        </button>
         <Dropdown className="user-profile">
           <Dropdown.Toggle>
             <img src={adminUser} alt="User" />

@@ -252,18 +252,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
-.btn{box-shadow: none !important; transition: all 0.3s; border-radius: 10px;}
+.btn{box-shadow: none !important; transition: all 0.3s; border-radius: 10px; font-weight: 500;font-size: 20px;line-height: 24px;text-transform: uppercase;}
+.btn-primary{background-color: #59B997 !important;border-color: #59B997 !important; padding: 14px 12px;}
+.btn-primary:hover,
+.btn-primary:focus{background-color: rgb(62, 129, 105) !important; border-color: #59B997 !important;}
 .primary-icon-button{
-    background-color: transparent !important;
     border: 1px solid #EAEAEA !important;
-    border-radius: 10px;
     padding: 10px 12px;
 }
 .primary-icon-button:hover, .primary-icon-button:focus {background-color: #e9f6f2 !important; border-color: #59B997 !important;}
 .primary-icon-button img{display: block; height: 26px; width: 26px;}
-.btn-primary{background-color: #59B997 !important;border-color: #59B997 !important;font-weight: 500;font-size: 20px;line-height: 24px;text-transform: uppercase; padding: 14px 12px;}
-.btn-primary:hover,
-.btn-primary:focus{background-color: rgb(62, 129, 105) !important; border-color: #59B997 !important;}
 
 /* Form Control
 --------------------------------------------------------------------------------------------------------*/
@@ -297,7 +295,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .login-wrapper .login-mockup {display: flex;align-items: center;justify-content: center;margin-top: 54px;}
 .login-wrapper .login-mockup>img {display: block;max-width: 100%;}
 .login-wrapper .copyright-text {font-weight: 400;font-size: 15px;line-height: 17px;color: #FFFFFF;}
-.login-wrapper .login-main {padding: 58px 20px;position: relative;}
+.login-wrapper .login-main {padding: 58px 20px;position: relative;background-color: #FFFFFF;}
 .login-wrapper .login-main h2 {font-weight: 500;font-size: 48px;line-height: 56px;color: #424242;padding-bottom: 12px;display: flex;}
 .login-wrapper .login-main h5 {font-weight: 500;font-size: 20px;line-height: 22px;color: #424242;font-weight: 500;padding-bottom: 16px;}
 .login-wrapper .forgot-password {display: flex;align-items: center;justify-content: space-between;margin: 29px 0 25px;}
@@ -347,7 +345,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .header .user-profile .btn{background-color: transparent !important; color: #4B4B4B; display: flex;align-items: center; padding: 8px 8px 8px 10px; margin-left: 21px; border-color: transparent !important;}
 .header .user-profile .btn::after{display: none;}
 .header .user-profile .btn:focus, .header .user-profile .btn:hover{border-color: #59B997 !important;}
-.header .user-profile .btn span{padding-left: 10px;padding-right: 8px;}
+.header .user-profile .btn span{padding-left: 10px;padding-right: 8px; text-transform: capitalize; font-weight: 400; font-size: 16px; line-height: 20px;}
 .header .user-profile::after{content: ''; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); height: 28px; width: 1px; background-color: #9C9C9C; opacity: 0.5;}
 
 /* Sidebar

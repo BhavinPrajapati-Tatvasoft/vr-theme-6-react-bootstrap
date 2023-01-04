@@ -103,8 +103,7 @@ const Login = () => {
                 </div>
                 <div className="d-block d-lg-none">
                   <p className="copyright-text">
-                    {" "}
-                    © 2021 Company. All Rights Reserved.{" "}
+                    © 2021 Company. All Rights Reserved.
                   </p>
                 </div>
               </div>
