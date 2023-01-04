@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Button from 'react-bootstrap/esm/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
