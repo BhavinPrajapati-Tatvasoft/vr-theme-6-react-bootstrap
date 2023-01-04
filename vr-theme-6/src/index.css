@@ -271,14 +271,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-floating>label {padding: 16px 12px 11px 0;transition: all 300ms ease;}
 .form-control:focus,.form-select:focus {box-shadow: none;border-color: #59B997;}
 .form-control:focus~label {color: #59B997;}
-.form-floating .form-select {border: 0;border-bottom: 1px solid #E9E9E9;padding: 24px 12px 8px 4px;border-radius: 0;height: 50px; background-image: url('./assets//images/arrow-down-ic.svg'); background-size: 20px; background-position: 10px 15px;}
+.form-floating .form-select {border: 0;border-bottom: 1px solid #E9E9E9;padding: 24px 12px 8px 4px;border-radius: 0;height: 50px; background-image: url('./assets//images/arrow-down-ic.svg'); background-size: 20px; background-position: bottom 8px right 10px;}
 
 .password-wrapper .icon-wrapper{position: absolute;right: 10px; bottom: 5px;display: flex;align-items: center;justify-content: center; padding: 5px; border: 0;border-radius: 50%;}
 .password-wrapper .icon-wrapper:hover,
 .password-wrapper .icon-wrapper:focus{background-color: rgba(0,0,0,0.08);}
 .password-wrapper .form-control{padding-right: 40px;}
 
-.custom-card{padding: 26px 30px; border: 1px solid #EAEAEA; border-radius: 10px; height: 100%;}
+.custom-card{padding: 26px 30px; border: 1px solid #EAEAEA; border-radius: 10px; height: 100%; background-color: #fff;}
 
 .page-title {padding-bottom: 25px;color: #4B4B4B;font-weight: 400;font-size: 30px;line-height: 34px;}
 
