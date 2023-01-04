@@ -59,7 +59,7 @@ const Login = () => {
                                         />
                                         <Link to="#" title='forgot password' className='custom-link'>Forgot password</Link>
                                     </div>
-                                    <Button variant="primary" size="lg" className='w-100' title='Login'>Login</Button>
+                                    <Button variant="primary" size="lg" className='w-100' title='Login'  href="/dashboard">Login</Button>
                                     <p className='sign-up-link'>Don’t have an account? <Link to="#" title='Sign up'>Sign up</Link></p>
                                 </form>
                                 <div className="other-links">
