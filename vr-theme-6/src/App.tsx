@@ -1,13 +1,25 @@
 import React from 'react';
 import Button from 'react-bootstrap/esm/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from 'react-bootstrap';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './Pages/Dashboard';
+import Login from './Pages/Login';
+
+
 
 function App() {
   return (
-    <div className="App">
-        <Button variant="primary">Primary</Button>
-        <div className="header">Header sass</div>
-    </div>
+    <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/" element={<Login />}></Route>
+          </Routes>
+        </BrowserRouter>
+
+    </>
   );
 }
 
