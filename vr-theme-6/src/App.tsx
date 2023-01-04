@@ -5,6 +5,7 @@ import { ThemeProvider } from 'react-bootstrap';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
+import Inner from './Pages/Inner';
 
 
 
@@ -13,6 +14,7 @@ function App() {
     <>
         <BrowserRouter>
           <Routes>
+            <Route path="/inner" element={<Inner />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/" element={<Login />}></Route>
