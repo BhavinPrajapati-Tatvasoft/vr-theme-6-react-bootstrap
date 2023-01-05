@@ -18,6 +18,7 @@ import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
 import Tab from "react-bootstrap/Tab";
 import React from "react";
+import gsap from "gsap";
 
 const { useLayoutEffect } = React;
 const Innerpage = () => {
