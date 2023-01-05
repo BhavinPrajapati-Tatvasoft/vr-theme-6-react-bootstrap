@@ -1,8 +1,6 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
-import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
@@ -18,18 +16,25 @@ import {
 import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
-import Tab from 'react-bootstrap/Tab';
-import { useEffect } from 'react';
-import gsap from 'gsap';
+import Tab from "react-bootstrap/Tab";
+import React from "react";
 
-
+const { useLayoutEffect } = React;
 const Innerpage = () => {
   //GSAP Animation
-  useEffect(() => {
+  useLayoutEffect(() => {
     let pageText = gsap.timeline();
-    pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
-    pageText.fromTo(".inner h5", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
-  });
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      ".inner h5",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+  }, []);
   return (
     <>
       <Helmet>
@@ -187,15 +192,18 @@ const Innerpage = () => {
               <h5>Other Design elements</h5>
               <h6>File Upload</h6>
               <div className="file-upload-main">
-                <div className="file-content">
+                <div className="relative">
                   <input
                     type="file"
                     name="Upload"
                     id="upload"
                     placeholder="Upload"
                   />
-                  <img src={uploadIcon} alt="Upload Icon" />
-                  <h4>Upload</h4>
+
+                  <div className="file-content">
+                    <img src={uploadIcon} alt="Upload Icon" />
+                    <h4>Upload</h4>
+                  </div>
                 </div>
                 <p>No item Selected</p>
               </div>
