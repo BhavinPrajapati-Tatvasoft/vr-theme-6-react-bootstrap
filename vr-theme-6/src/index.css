@@ -187,7 +187,7 @@ h6 {
 h2{font-size: 48px; line-height: 54px; font-weight: 500;}
 h3{font-size: 30px; line-height: 36px;}
 h5{font-size: 20px; line-height: 26px;}
-h6{font-size: 18px; line-height: 24px; font-weight: 300,}
+h6{font-size: 18px; line-height: 24px; font-weight: 300;}
 h1 span,
 h2 span,
 h3 span,
@@ -268,7 +268,7 @@ input[type="search"]::-webkit-search-results-decoration {
 /* Form Control
 --------------------------------------------------------------------------------------------------------*/
 .form-control{box-shadow: none !important;}
-.form-floating {font-weight: 400;font-size: 15px;line-height: 20px;color: #9C9C9C;height: 50px;position: relative;}
+.form-floating {font-weight: 400;font-size: 15px;line-height: 20px;color: #9C9C9C;height: 50px;position: relative;margin-bottom: 24px;}
 .form-floating .form-control {border: 0;border-bottom: 1px solid #E9E9E9;padding: 8px 12px 8px 4px;border-radius: 0;height: 50px;}
 .form-floating>label {padding: 16px 12px 11px 0;transition: all 300ms ease;}
 .form-control:focus,.form-select:focus {box-shadow: none;border-color: #59B997;}
@@ -278,6 +278,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-floating>.form-control:focus~label, 
 .form-floating>.form-control:not(:placeholder-shown)~label, 
 .form-floating>.form-select~label {opacity: 1;transform: scale(.80) translateY(-20px);}
+.form-control:disabled{background-color: transparent; border-bottom: 1px dashed #CECECE; color: #9C9C9C;}
+.form-check-inline{margin-right: 50px;}
 
 /* Password Field
 --------------------------------------------------------------------------------------------------------*/
@@ -304,7 +306,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Alert
 --------------------------------------------------------------------------------------------------------*/
-.alert{display: flex;align-items: flex-start; padding: 12px 40px 12px 10px;}
+.alert{display: flex;align-items: flex-start; padding: 12px 40px 12px 10px;margin-bottom: 22px;}
 .alert .alert-icon{display: block;margin-right: 8px;}
 .alert-danger{background: #FFFAFA;border: 1px solid #FF3535;color: #FF3535;}
 .alert-info{background: #F3FDFF;border: 1px solid #00B9E1;color: #00B9E1;}
@@ -424,14 +426,24 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Inner Page
 --------------------------------------------------------------------------------------------------------*/
+.inner h5{padding-bottom: 6px;}
+.inner h6{padding-bottom: 16px;}
 .file-upload-main p {padding-bottom: 0;font-size: 15px;line-height: 20px;font-weight: 400;color: #9C9C9C;margin-left: 19px;}
 .file-upload-main {display: flex;align-items: center;margin-bottom: 36px;}
 .file-upload-main h4 {padding-bottom: 0;margin-left: 8px;}
 .file-content {display: flex;align-items: center;justify-content: center;width: 124px;height: 39px;background-color: #F6F6F6; border-radius: 5px;position: absolute;z-index: 0;cursor: pointer; color: #6D6D6D;}
 .file-upload-main input {opacity: 0;z-index: 1;width: 124px;height: 39px;cursor: pointer;}
 
-.btn-groups{display: flex;align-items: center;flex-wrap: wrap;}
+.btn-groups{display: flex;align-items: center;flex-wrap: wrap;margin-bottom: 54px;}
 .btn-groups .btn:not(:last-child){margin-right: 20px;}
+
+.other-design h5{padding-bottom: 18px;}
+.check-group{margin-bottom: 22px;}
+.snackbar-group{--bs-gutter-x: 30px;margin-bottom: 10px;}
+
+
+
+
 
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
