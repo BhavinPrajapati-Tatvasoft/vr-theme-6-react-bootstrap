@@ -52,7 +52,7 @@ const Login = () => {
                     className="password-wrapper"
                   >
                     <Form.Control type="password" placeholder="Password" />
-                    <button className="btn icon-wrapper">
+                    <button className="btn icon-wrapper" type="button">
                       <img src={hidePasswordIcon} alt="Hide Password" />
                     </button>
                   </FloatingLabel>
