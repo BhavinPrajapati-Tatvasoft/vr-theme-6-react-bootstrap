@@ -20,25 +20,40 @@ import {
   worldMap,
 } from "../../assets/images";
 import WeeklyReport from "../../Components/Charts/weeklyReport";
-import { useRef } from 'react';
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from "react";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Dashboard: React.FC = () => {
-
   //GSAP Animation
   const progressTimelineMain = useRef(null);
   useEffect(() => {
     let statisticsSvg = gsap.timeline();
-    statisticsSvg.fromTo(".statistic-card .img-block img", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 });
+    statisticsSvg.fromTo(
+      ".statistic-card .img-block img",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1 }
+    );
 
     let pageText = gsap.timeline();
-    pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
-    pageText.fromTo(".statistic-card p", { y: "40px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
-    pageText.fromTo("h5", { y: "40px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      ".statistic-card p",
+      { y: "40px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+    pageText.fromTo(
+      "h5",
+      { y: "40px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
 
     // Sales by Locations Card Progress Bar Animation
     const progressTimeline = progressTimelineMain.current;
@@ -47,9 +62,8 @@ const Dashboard: React.FC = () => {
         trigger: progressTimeline,
         start: "top center",
         end: "+=600",
-      }
+      },
     });
-    // progressBarAnimation.fromTo(".MuiLinearProgress-bar", { width: 0 }, { width: "100%", duration: 2 });
   });
 
   return (
@@ -63,10 +77,13 @@ const Dashboard: React.FC = () => {
         <div className="main-content">
           <h3 className="page-title">Dashboard</h3>
           <Row>
+            {/* Statistics Card */}
             <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Property Sold" className="statistic-card blue">
                 <div>
-                  <h3><CountUp end={6387} /></h3>
+                  <h3>
+                    <CountUp end={6387} />
+                  </h3>
                   <p>Property Sold</p>
                 </div>
                 <div className="img-block">
@@ -77,7 +94,9 @@ const Dashboard: React.FC = () => {
             <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Income" className="statistic-card pink">
                 <div>
-                  <h3><CountUp end={9712} prefix="$" separator="," /></h3>
+                  <h3>
+                    <CountUp end={9712} prefix="$" separator="," />
+                  </h3>
                   <p>Income</p>
                 </div>
                 <div className="img-block">
@@ -88,7 +107,9 @@ const Dashboard: React.FC = () => {
             <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Expense" className="statistic-card orange">
                 <div>
-                  <h3><CountUp end={965} /></h3>
+                  <h3>
+                    <CountUp end={965} />
+                  </h3>
                   <p>Expense</p>
                 </div>
                 <div className="img-block">
@@ -103,7 +124,9 @@ const Dashboard: React.FC = () => {
                 className="statistic-card red"
               >
                 <div>
-                  <h3><CountUp end={8723} prefix="$" separator="," /></h3>
+                  <h3>
+                    <CountUp end={8723} prefix="$" separator="," />
+                  </h3>
                   <p>Property Rented</p>
                 </div>
                 <div className="img-block">
@@ -111,6 +134,8 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
+
+            {/* Weekly Report Card */}
             <Col xs={12} xl={7} className="mb-3 mb-sm-4">
               <div className="custom-card weekly-report-card">
                 <div className="card-heading">
@@ -123,6 +148,8 @@ const Dashboard: React.FC = () => {
                 <WeeklyReport />
               </div>
             </Col>
+
+            {/* Transaction Card */}
             <Col xs={12} xl={5} className="mb-3 mb-sm-4">
               <div className="custom-card transaction-card">
                 <div className="card-heading">
@@ -199,6 +226,8 @@ const Dashboard: React.FC = () => {
                 </ul>
               </div>
             </Col>
+
+            {/* Table Card */}
             <Col xs={12} xl={7} className="mb-3 mb-sm-4 mb-xl-0">
               <div className="custom-card">
                 <div className="card-heading">
@@ -451,6 +480,8 @@ const Dashboard: React.FC = () => {
                 </Table>
               </div>
             </Col>
+
+            {/* Sales by Locations Card */}
             <Col xs={12} xl={5}>
               <div className="custom-card" ref={progressTimelineMain}>
                 <div className="card-heading">

@@ -471,8 +471,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .file-upload-main p {padding-bottom: 0;font-size: 15px;line-height: 20px;font-weight: 400;color: #9C9C9C;margin-left: 19px;}
 .file-upload-main {display: flex;align-items: center;margin-bottom: 36px;}
 .file-upload-main h4 {padding-bottom: 0;margin-left: 8px;}
-.file-content {display: flex;align-items: center;justify-content: center;width: 124px;height: 39px;background-color: #F6F6F6; border-radius: 5px;position: absolute;z-index: 0;cursor: pointer; color: #6D6D6D;}
-.file-upload-main input {opacity: 0;z-index: 1;width: 124px;height: 39px;cursor: pointer;}
+.file-content {display: flex;align-items: center;justify-content: center;width: 124px;height: 39px;background-color: #F6F6F6; border-radius: 5px;cursor: pointer; color: #6D6D6D; position: relative;}
+.file-upload-main input {opacity: 0;position: absolute; left: 0; right: 0; top: 0; bottom: 0; cursor: pointer;}
 
 .btn-groups{display: flex;align-items: center;flex-wrap: wrap;margin-bottom: 54px; gap: 20px;}
 
@@ -548,12 +548,11 @@ input[type="search"]::-webkit-search-results-decoration {
     .header .user-profile .btn{margin-left: 5px;}
     .header .toggle-button{margin-right: 10px;}
     .header .logo img{height: 36px; width: 36px;}
+    .header .search-wrapper>div{margin: 16px auto;}
     .statistic-card{padding: 16px;}
     .statistic-card h3{padding-bottom: 8px;}
     .custom-card{padding: 16px;}
     .card-heading{margin-bottom: 10px;}
-    .header .search-wrapper>div{margin: 16px auto;}
-
     .inner h5:not(:first-child){padding-top: 8px;}
     .custom-row{ --bs-gutter-y: 0;}
 }
@@ -562,8 +561,8 @@ input[type="search"]::-webkit-search-results-decoration {
     h3{font-size: 20px; line-height: 26px;}
     h5{font-size: 16px; line-height: 20px;}
     h6{font-size: 15px; line-height: 20px;}
+    .statistic-card{height: auto; margin-bottom: 16px;}
     .statistic-card .img-block{width: 54px; height: 54px;}
     .weekly-report-card .card-heading { flex-direction: column; align-items: flex-start;}
     .weekly-report-card .graph-notation{margin-top: 8px;}
-    .statistic-card{height: auto; margin-bottom: 16px;}
 }
