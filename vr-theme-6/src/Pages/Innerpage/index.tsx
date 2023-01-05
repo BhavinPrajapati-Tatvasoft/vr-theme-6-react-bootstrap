@@ -19,8 +19,17 @@ import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
 import Tab from 'react-bootstrap/Tab';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+
 
 const Innerpage = () => {
+  //GSAP Animation
+  useEffect(() => {
+    let pageText = gsap.timeline();
+    pageText.fromTo(".page-title", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
+    pageText.fromTo(".inner h5", { y: "20px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
+  });
   return (
     <>
       <Helmet>
@@ -67,7 +76,7 @@ const Innerpage = () => {
 
             {/* -------- second column start ---------  */}
             <h5>Two Column</h5>
-            <Row>
+            <Row className="custom-row">
               <Col md={6}>
                 <FloatingLabel
                   controlId="floatingInput"
@@ -231,7 +240,6 @@ const Innerpage = () => {
                   name="group1"
                   type={"checkbox"}
                   id={`inline-check-1`}
-                  checked
                 />
                 <Form.Check
                   inline

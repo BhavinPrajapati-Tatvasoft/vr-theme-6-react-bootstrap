@@ -8,11 +8,27 @@ import {
   settingsIcon,
   userIcon,
 } from "../../assets/images";
+import { useEffect } from 'react';
+import gsap from 'gsap';
+
 
 const Sidebar: React.FC = () => {
   function closeSidebar() {
     document.body.classList.remove("open-sidebar");
   }
+
+  useEffect(() => {
+    gsap.fromTo(".sidebar .nav-item a", {
+      opacity: 0,
+      x: -40,
+    }, {
+      opacity: 1,
+      x: 0,
+      stagger: 0.3,
+    }
+    );
+  })
+
   return (
     <Nav className="sidebar">
       <Nav.Item>

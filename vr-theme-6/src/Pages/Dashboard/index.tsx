@@ -40,16 +40,6 @@ const Dashboard: React.FC = () => {
     pageText.fromTo(".statistic-card p", { y: "40px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
     pageText.fromTo("h5", { y: "40px", opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3 });
 
-    gsap.fromTo(".sidebar .nav-item a", {
-      opacity: 0,
-      x: -40,
-    }, {
-      opacity: 1,
-      x: 0,
-      stagger: 0.3,
-    }
-    );
-
     // Sales by Locations Card Progress Bar Animation
     const progressTimeline = progressTimelineMain.current;
     let progressBarAnimation = gsap.timeline({
