@@ -252,6 +252,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .main-content{ padding: 127px 40px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); }
 .page-title{ padding-bottom: 21px; color: #4B4B4B;}
 .open-sidebar .main-content{margin-left: 0;width: 100%;}
+
 /* Button
 --------------------------------------------------------------------------------------------------------*/
 .btn{box-shadow: none !important; transition: all 0.3s; border-radius: 10px; font-weight: 500;font-size: 20px;line-height: 24px;text-transform: uppercase;}
@@ -327,6 +328,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .alert-warning .btn-close{background-image: url('./assets/images/warning-close-ic.svg');}
 .alert-success .btn-close{background-image: url('./assets/images/success-close-ic.svg');}
 .alert-dismissible .btn-close{top: 50%; transform: translateY(-50%);}
+
 /* Tabs
 --------------------------------------------------------------------------------------------------------*/
 .tab-container h5{padding-bottom: 10px;}
@@ -495,14 +497,29 @@ input[type="search"]::-webkit-search-results-decoration {
     .login-wrapper .other-links { justify-content: center; gap: 16px; flex-wrap: wrap; }
     .login-main .copyright-text { color: #9C9C9C; display: block; padding-top: 16px; text-align: center;}
     .login-wrapper .login-main .sign-up-link { padding: 30px 0; }
-
+    .main-content{margin-left: 0; width: 100%; padding: 108px 20px 20px;}
+    .open-sidebar{overflow: hidden;}
+    .sidebar.nav{left: -238px; top: 88px;}
+    .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
+    .open-sidebar .sidebar{left: 0;}
+    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
+    .header{padding: 20px;}
+    .header .toggle-button{margin-right: 20px;}
+    .header .search-toggle{padding: 13px 15px;}
+    .header .search-toggle img{height: 20px; width: 20px;}
+    .header .search-wrapper{position: absolute;left: 0;right: 0;top: -100%;background-color: #3EAE86;max-width: none; transition: all 0.3s; padding: 0 16px; z-index: 1;}
+    .header .search-wrapper>div{position: relative; max-width: 450px; margin: 20px auto;}
+    .header .user-profile .btn{padding: 4px;}
+    .header .user-profile::after{left: 7px;}
+    .show-searchbar .search-wrapper{top: 0;}
     .nav-tabs .nav-item .nav-link{padding: 10px 8px;}
     .nav-tabs .nav-item:not(:last-child){margin-right: 16px;}
 }
 @media (max-width:767px) {
     h2{font-size: 40px; line-height: 46px;}
-    h3{font-size: 32px; line-height: 38px;}
+    h3{font-size: 26px; line-height: 30px;}
     .btn-primary,.btn-outline-primary{padding: 12px;}
+    .header .search-toggle{padding: 11px;}
     .login-hero{padding: 20px;}
     .main-content{padding: 100px 16px 16px;}
     .page-title{padding-bottom: 16px;}
