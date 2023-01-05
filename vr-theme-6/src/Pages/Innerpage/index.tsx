@@ -18,7 +18,7 @@ import {
 import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
-import Tab from 'react-bootstrap/Tab';
+import Tab from "react-bootstrap/Tab";
 
 const Innerpage = () => {
   return (
@@ -34,23 +34,16 @@ const Innerpage = () => {
           <div className="custom-card">
             {/* -------- first column start ---------  */}
             <h5>One Column</h5>
-            <FloatingLabel
-              controlId="floatingInput"
-              label="Username"
-
-            >
+            <FloatingLabel controlId="floatingInput" label="Username">
               <Form.Control type="text" placeholder="Username" />
             </FloatingLabel>
-
-            <FloatingLabel label="Dropdown" >
+            <FloatingLabel label="Dropdown">
               <Form.Select>
-                {/* <option>Drop Down</option> */}
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
               </Form.Select>
             </FloatingLabel>
-
             <FloatingLabel
               controlId="multilineInput"
               label="Multiple line"
@@ -69,11 +62,7 @@ const Innerpage = () => {
             <h5>Two Column</h5>
             <Row>
               <Col md={6}>
-                <FloatingLabel
-                  controlId="floatingInput"
-                  label="Username"
-
-                >
+                <FloatingLabel controlId="floatingInput" label="Username">
                   <Form.Control type="text" placeholder="Username" />
                 </FloatingLabel>
               </Col>
@@ -90,20 +79,12 @@ const Innerpage = () => {
                 </FloatingLabel>
               </Col>
               <Col md={6}>
-                <FloatingLabel
-                  controlId="innerName"
-                  label="Name"
-
-                >
+                <FloatingLabel controlId="innerName" label="Name">
                   <Form.Control type="text" placeholder="Name" />
                 </FloatingLabel>
               </Col>
               <Col md={6}>
-                <FloatingLabel
-                  controlId="innerError"
-                  label="Error"
-
-                >
+                <FloatingLabel controlId="innerError" label="Error">
                   <Form.Control
                     type="text"
                     placeholder="Error"
@@ -119,21 +100,13 @@ const Innerpage = () => {
             <h5>Three Column</h5>
             <Row>
               <Col lg={4} md={6}>
-                <FloatingLabel
-                  controlId="floatingFocus"
-                  label="Focus"
-
-                >
+                <FloatingLabel controlId="floatingFocus" label="Focus">
                   <Form.Control type="text" placeholder="Focus" />
                 </FloatingLabel>
               </Col>
 
               <Col lg={4} md={6}>
-                <FloatingLabel
-                  controlId="disabled"
-                  label="Disabled"
-
-                >
+                <FloatingLabel controlId="disabled" label="Disabled">
                   <Form.Control
                     type="text"
                     placeholder="Disabled"
@@ -144,9 +117,8 @@ const Innerpage = () => {
               </Col>
 
               <Col lg={4} md={6}>
-                <FloatingLabel label="Dropdown" >
+                <FloatingLabel label="Dropdown">
                   <Form.Select>
-                    {/* <option>Drop Down</option> */}
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -160,11 +132,7 @@ const Innerpage = () => {
             <h5>Four Column</h5>
             <Row>
               <Col lg={3} md={6}>
-                <FloatingLabel
-                  controlId="floatingInputSecond"
-                  label="Username"
-
-                >
+                <FloatingLabel controlId="floatingInputSecond" label="Username">
                   <Form.Control type="text" placeholder="Username" />
                 </FloatingLabel>
               </Col>
@@ -183,9 +151,8 @@ const Innerpage = () => {
               </Col>
 
               <Col lg={3} md={6}>
-                <FloatingLabel label="Dropdown" >
+                <FloatingLabel label="Dropdown">
                   <Form.Select>
-                    {/* <option>Drop Down</option> */}
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -194,11 +161,7 @@ const Innerpage = () => {
               </Col>
 
               <Col lg={3} md={6}>
-                <FloatingLabel
-                  controlId="innerErrorSecond"
-                  label="Error"
-
-                >
+                <FloatingLabel controlId="innerErrorSecond" label="Error">
                   <Form.Control
                     type="text"
                     placeholder="Error"
@@ -215,8 +178,13 @@ const Innerpage = () => {
               <h5>Other Design elements</h5>
               <h6>File Upload</h6>
               <div className="file-upload-main">
-                <input type="file" name="Upload" id="upload" placeholder="Upload" />
                 <div className="file-content">
+                  <input
+                    type="file"
+                    name="Upload"
+                    id="upload"
+                    placeholder="Upload"
+                  />
                   <img src={uploadIcon} alt="Upload Icon" />
                   <h4>Upload</h4>
                 </div>
@@ -265,25 +233,41 @@ const Innerpage = () => {
               <Row className="snackbar-group">
                 <Col md={6}>
                   <Alert variant="danger" dismissible>
-                    <img src={alertErrorIcon} className="alert-icon" alt="Error Icon" />
+                    <img
+                      src={alertErrorIcon}
+                      className="alert-icon"
+                      alt="Error Icon"
+                    />
                     <p>This is an error Message</p>
                   </Alert>
                 </Col>
                 <Col md={6}>
                   <Alert variant="info" dismissible>
-                    <img src={alertInfoIcon} className="alert-icon" alt="Info Icon" />
+                    <img
+                      src={alertInfoIcon}
+                      className="alert-icon"
+                      alt="Info Icon"
+                    />
                     <p>This is an information message!</p>
                   </Alert>
                 </Col>
                 <Col md={6}>
                   <Alert variant="warning" dismissible>
-                    <img src={alertWarningIcon} className="alert-icon" alt="Warning Icon" />
+                    <img
+                      src={alertWarningIcon}
+                      className="alert-icon"
+                      alt="Warning Icon"
+                    />
                     <p>This is a warning message!</p>
                   </Alert>
                 </Col>
                 <Col md={6}>
                   <Alert variant="success" dismissible>
-                    <img src={alertSuccessIcon} className="alert-icon" alt="Success Icon" />
+                    <img
+                      src={alertSuccessIcon}
+                      className="alert-icon"
+                      alt="Success Icon"
+                    />
                     <p>This is a Success message!</p>
                   </Alert>
                 </Col>
@@ -297,37 +281,39 @@ const Innerpage = () => {
             </div>
             {/* -------- other design end ---------  */}
 
-
             {/* -------- Tabs start ---------  */}
             <div className="tab-container">
               <h5>Tabs</h5>
-              <Tabs
-                defaultActiveKey="tab1"
-                id="tabExample"
-              >
+              <Tabs defaultActiveKey="tab1" id="tabExample">
                 <Tab eventKey="tab1" title="Tab 1">
-                  It is a long established fact that a reader will be distracted by the readable content of
-                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                  like readable English. Many desktop publishing
-                  packages and web page editors now use Lorem Ipsum
-                  as their default model text, and a search for 'lorem ipsum' will
-                  uncover many web sites still in their infancy.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum as their default model text, and a search for
+                  'lorem ipsum' will uncover many web sites still in their
+                  infancy.
                 </Tab>
                 <Tab eventKey="tab2" title="Tab 2">
                   Tab Content 2
                 </Tab>
                 <Tab eventKey="tab3" title="Tab 3">
-                  It is a long established fact that a reader will be distracted by the readable content of
-                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                  like readable English. Many desktop publishing
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing
                 </Tab>
                 <Tab eventKey="tab4" title="Tab 4">
-                  It is a long established fact that a reader will be distracted by the readable content of
-                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                  like readable English. Many desktop publishing
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                  Many desktop publishing
                 </Tab>
               </Tabs>
             </div>
