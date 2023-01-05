@@ -231,6 +231,7 @@ const Innerpage = () => {
                   name="group1"
                   type={"checkbox"}
                   id={`inline-check-1`}
+                  checked
                 />
                 <Form.Check
                   inline
@@ -256,6 +257,7 @@ const Innerpage = () => {
                   name="group1"
                   type={"radio"}
                   id={`inline-radio-2`}
+                  checked
                 />
               </div>
 
