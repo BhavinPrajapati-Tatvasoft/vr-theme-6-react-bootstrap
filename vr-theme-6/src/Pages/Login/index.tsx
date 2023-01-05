@@ -4,7 +4,7 @@ import Container from "react-bootstrap/esm/Container";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 import Row from "react-bootstrap/esm/Row";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { hidePasswordIcon, loginMockup, LogoWhite } from "../../assets/images";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -94,14 +94,13 @@ const Login = () => {
                       Forgot password
                     </Link>
                   </div>
-                  <Button
-                    variant="primary"
-                    className="w-100"
+                  <NavLink
+                    to="/dashboard"
                     title="Login"
-                    href="/dashboard"
+                    className="btn btn-primary w-100"
                   >
                     Login
-                  </Button>
+                  </NavLink>
                   <p className="sign-up-link">
                     Don’t have an account?{" "}
                     <Link to="#" title="Sign up">

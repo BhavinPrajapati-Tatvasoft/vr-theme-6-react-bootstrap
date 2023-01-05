@@ -11,6 +11,7 @@ import {
 } from "../../assets/images";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
+import { NavLink } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -71,9 +72,9 @@ const Header: React.FC = () => {
               <Dropdown.Item href="#" title="My Account">
                 My Account
               </Dropdown.Item>
-              <Dropdown.Item href="/login" title="Logout">
+              <NavLink to="/login" title="Logout" className="dropdown-item">
                 Logout
-              </Dropdown.Item>
+              </NavLink>
             </Dropdown.Menu>
           </Dropdown>
         </div>
