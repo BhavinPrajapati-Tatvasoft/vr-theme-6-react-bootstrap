@@ -7,18 +7,20 @@ import { Helmet } from "react-helmet";
 import { Link, NavLink } from "react-router-dom";
 import { hidePasswordIcon, loginMockup, LogoWhite } from "../../assets/images";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import gsap from 'gsap';
-import { useEffect } from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import gsap from "gsap";
+import { Typewriter } from "react-simple-typewriter";
 
+const { useLayoutEffect } = React;
 const Login = () => {
-
   //GSAP Animations
-  useEffect(() => {
+  useLayoutEffect(() => {
     let loginText = gsap.timeline();
-    loginText.fromTo(".login-wrapper h5", { y: "-40px", opacity: 0 }, { y: 0, opacity: 1, delay: .5 });
-  });
+    loginText.fromTo(
+      ".login-wrapper h5",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, delay: 0.5 }
+    );
+  }, []);
 
   return (
     <>
@@ -35,10 +37,19 @@ const Login = () => {
                 </Link>
                 <div className="d-none d-lg-block">
                   <div className="login-mockup">
-                    <img src={loginMockup} alt="Mockup" onLoad={e => {
-                      let loginImg = gsap.timeline();
-                      loginImg.fromTo(".login-wrapper .login-mockup img", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1 }, "<");
-                    }} />
+                    <img
+                      src={loginMockup}
+                      alt="Mockup"
+                      onLoad={(e) => {
+                        let loginImg = gsap.timeline();
+                        loginImg.fromTo(
+                          ".login-wrapper .login-mockup img",
+                          { scale: 0, opacity: 0 },
+                          { scale: 1, opacity: 1 },
+                          "<"
+                        );
+                      }}
+                    />
                   </div>
                 </div>
                 <p className="copyright-text d-none d-lg-block">
@@ -51,10 +62,10 @@ const Login = () => {
                 <form>
                   <h2>
                     <Typewriter
-                      words={['Welcome Back!']}
+                      words={["Welcome Back!"]}
                       loop={false}
                       cursor
-                      cursorStyle='|'
+                      cursorStyle="|"
                       typeSpeed={70}
                       deleteSpeed={100}
                       delaySpeed={1000}

@@ -20,17 +20,17 @@ import {
   worldMap,
 } from "../../assets/images";
 import WeeklyReport from "../../Components/Charts/weeklyReport";
-import { useRef } from "react";
-import { useEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const { useLayoutEffect } = React;
 const Dashboard: React.FC = () => {
   //GSAP Animation
   const progressTimelineMain = useRef(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     let statisticsSvg = gsap.timeline();
     statisticsSvg.fromTo(
       ".statistic-card .img-block img",
@@ -67,17 +67,7 @@ const Dashboard: React.FC = () => {
         stagger: 0.3,
       }
     );
-
-    // Sales by Locations Card Progress Bar Animation
-    const progressTimeline = progressTimelineMain.current;
-    let progressBarAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: progressTimeline,
-        start: "top center",
-        end: "+=600",
-      },
-    });
-  });
+  }, []);
 
   return (
     <>

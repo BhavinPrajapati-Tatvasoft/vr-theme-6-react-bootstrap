@@ -1,8 +1,6 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
-import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
@@ -19,8 +17,24 @@ import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
 import Tab from "react-bootstrap/Tab";
+import React from "react";
 
+const { useLayoutEffect } = React;
 const Innerpage = () => {
+  //GSAP Animation
+  useLayoutEffect(() => {
+    let pageText = gsap.timeline();
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      ".inner h5",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+  }, []);
   return (
     <>
       <Helmet>
