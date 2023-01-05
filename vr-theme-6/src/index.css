@@ -288,7 +288,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-control.is-invalid:focus~label{color: #FF3232;}
 .multiline-block{height: auto;}
 .multiline-block .form-control{min-height: 106px;}
-.multiline-block .form-control~label{height: auto;background-color: #FFFFFF;z-index: 1;}
+.multiline-block .form-control~label{height: auto;background-color: #FFFFFF;}
 
 /* Password Field
 --------------------------------------------------------------------------------------------------------*/
@@ -362,7 +362,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .login-wrapper .login-main {padding: 58px 20px;position: relative;background-color: #FFFFFF;}
 .login-wrapper .login-main h2 {font-weight: 500;font-size: 48px;line-height: 56px;color: #424242;padding-bottom: 12px;display: flex;}
 .login-wrapper .login-main h5 {font-weight: 500;font-size: 20px;line-height: 22px;color: #424242;font-weight: 500;padding-bottom: 16px;}
-.login-wrapper .forgot-password {display: flex;align-items: center;justify-content: space-between;margin: 29px 0 25px;}
+.login-wrapper .forgot-password {display: flex;align-items: center;justify-content: space-between;margin: 0 0 25px;}
 .login-wrapper .forgot-password .form-check {color: #9C9C9C;font-weight: 400;font-size: 15px;line-height: 18px;display: flex;align-items: center;margin-bottom: 0;}
 .login-wrapper .form-wrapper {display: flex;flex-direction: column;height: 100%;max-width: 452px;width: 100%;margin: 0 auto;justify-content: center;}
 .login-wrapper .form-wrapper form {margin: auto 0;padding: 10px 0;}
@@ -540,6 +540,8 @@ input[type="search"]::-webkit-search-results-decoration {
     .custom-card{padding: 16px;}
     .card-heading{margin-bottom: 10px;}
     .header .search-wrapper>div{margin: 16px auto;}
+
+    .inner h5:not(:first-child){padding-top: 8px;}
 }
 @media (max-width:575px) {
     h2{font-size: 26px; line-height: 32px;}
