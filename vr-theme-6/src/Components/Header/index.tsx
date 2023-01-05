@@ -14,42 +14,71 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const Header: React.FC = () => {
   return (
-    <header className="header">
-      <button className="primary-icon-button btn toggle-button">
-        <img src={hamburgerIcon} alt="Hamburger" />
-      </button>
-      <a href="#" title="Company" className="logo">
-        <img src={LogoBlack} alt="Company" className="d-none d-lg-block" />
-        <img src={mobileLogo} alt="Company" className="d-block d-lg-none" />
-      </a>
-      <div className="right-content">
-        <div className="search-wrapper">
-          <Form.Control type="text" placeholder="Search" />
-          <button className="btn">
+    <>
+      <div
+        className="overlay"
+        onClick={(e) =>
+          document.body.classList.remove("open-sidebar", "show-searchbar")
+        }
+      ></div>
+      <header className="header">
+        <button
+          className="primary-icon-button btn toggle-button"
+          onClick={(e) => document.body.classList.toggle("open-sidebar")}
+        >
+          <img src={hamburgerIcon} alt="Hamburger" />
+        </button>
+        <a href="#" title="Company" className="logo">
+          <img src={LogoBlack} alt="Company" className="d-none d-lg-block" />
+          <img src={mobileLogo} alt="Company" className="d-block d-lg-none" />
+        </a>
+        <div className="right-content">
+          <div className="search-wrapper">
+            <div>
+              <Form.Control type="text" placeholder="Search" />
+              <button className="btn">
+                <img src={searchIcon} alt="Hamburger" />
+              </button>
+            </div>
+          </div>
+          <button
+            className="primary-icon-button btn d-inline-block d-lg-none search-toggle"
+            onClick={(e) => document.body.classList.toggle("show-searchbar")}
+          >
             <img src={searchIcon} alt="Hamburger" />
           </button>
-        </div>
-        <button className="primary-icon-button btn">
-          <img src={messageIcon} alt="Hamburger" />
-        </button>
-        <button className="primary-icon-button btn">
-          <img src={notificationIcon} alt="Hamburger" />
-        </button>
-        <Dropdown className="user-profile">
-          <Dropdown.Toggle>
-            <img src={adminUser} alt="User" />
-            <span>Jhon Doe</span>
-            <img src={profileDownArrowIcon} alt="Down Arrow" />
-          </Dropdown.Toggle>
+          <button className="primary-icon-button btn">
+            <img src={messageIcon} alt="Hamburger" />
+          </button>
+          <button className="primary-icon-button btn">
+            <img src={notificationIcon} alt="Hamburger" />
+          </button>
+          <Dropdown className="user-profile">
+            <Dropdown.Toggle>
+              <img src={adminUser} alt="User" />
+              <span className="d-none d-lg-block">Jhon Doe</span>
+              <img
+                className="d-none d-lg-block"
+                src={profileDownArrowIcon}
+                alt="Down Arrow"
+              />
+            </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </div>
-    </header>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#" title="Pofile">
+                Pofile
+              </Dropdown.Item>
+              <Dropdown.Item href="#" title="My Account">
+                My Account
+              </Dropdown.Item>
+              <Dropdown.Item href="/login" title="Logout">
+                Logout
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </header>
+    </>
   );
 };
 export default Header;

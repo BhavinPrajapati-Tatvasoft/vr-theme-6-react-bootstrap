@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
         <div className="main-content">
           <h3 className="page-title">Dashboard</h3>
           <Row>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Property Sold" className="statistic-card blue">
                 <div>
                   <h3>6387</h3>
@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Income" className="statistic-card pink">
                 <div>
                   <h3>$9,712</h3>
@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} sm={6} xl={3}>
               <a href="#" title="Expense" className="statistic-card orange">
                 <div>
                   <h3>965</h3>
@@ -66,7 +66,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} sm={6} xl={3}>
               <a
                 href="#"
                 title="Property Rented"
@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </a>
             </Col>
-            <Col xs={12} lg={7} className="mb-4">
+            <Col xs={12} xl={7} className="mb-3 mb-sm-4">
               <div className="custom-card weekly-report-card">
                 <div className="card-heading">
                   <h5 className="me-2">Weekly Report</h5>
@@ -93,7 +93,7 @@ const Dashboard: React.FC = () => {
                 <WeeklyReport />
               </div>
             </Col>
-            <Col xs={12} lg={5} className="mb-4">
+            <Col xs={12} xl={5} className="mb-3 mb-sm-4">
               <div className="custom-card transaction-card">
                 <div className="card-heading">
                   <h5 className="me-2">Transaction</h5>
@@ -169,7 +169,7 @@ const Dashboard: React.FC = () => {
                 </ul>
               </div>
             </Col>
-            <Col xs={12} lg={7}>
+            <Col xs={12} xl={7} className="mb-3 mb-sm-4 mb-xl-0">
               <div className="custom-card">
                 <div className="card-heading">
                   <h5 className="me-2">Table</h5>
@@ -421,7 +421,7 @@ const Dashboard: React.FC = () => {
                 </Table>
               </div>
             </Col>
-            <Col xs={12} lg={5}>
+            <Col xs={12} xl={5}>
               <div className="custom-card">
                 <div className="card-heading">
                   <h5 className="me-2">Sales by Locations</h5>
