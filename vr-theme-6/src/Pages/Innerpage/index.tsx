@@ -18,6 +18,7 @@ import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
 import Tab from "react-bootstrap/Tab";
 import React from "react";
+import gsap from "gsap";
 
 const { useLayoutEffect } = React;
 const Innerpage = () => {
@@ -74,7 +75,7 @@ const Innerpage = () => {
 
             {/* -------- second column start ---------  */}
             <h5>Two Column</h5>
-            <Row>
+            <Row className="custom-row">
               <Col md={6}>
                 <FloatingLabel controlId="floatingInput" label="Username">
                   <Form.Control type="text" placeholder="Username" />
@@ -216,7 +217,6 @@ const Innerpage = () => {
                   name="group1"
                   type={"checkbox"}
                   id={`inline-check-1`}
-                  checked
                 />
                 <Form.Check
                   inline
