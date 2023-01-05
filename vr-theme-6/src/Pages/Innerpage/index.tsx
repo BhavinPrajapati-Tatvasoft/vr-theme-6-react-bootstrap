@@ -178,15 +178,18 @@ const Innerpage = () => {
               <h5>Other Design elements</h5>
               <h6>File Upload</h6>
               <div className="file-upload-main">
-                <div className="file-content">
+                <div className="relative">
                   <input
                     type="file"
                     name="Upload"
                     id="upload"
                     placeholder="Upload"
                   />
-                  <img src={uploadIcon} alt="Upload Icon" />
-                  <h4>Upload</h4>
+
+                  <div className="file-content">
+                    <img src={uploadIcon} alt="Upload Icon" />
+                    <h4>Upload</h4>
+                  </div>
                 </div>
                 <p>No item Selected</p>
               </div>
