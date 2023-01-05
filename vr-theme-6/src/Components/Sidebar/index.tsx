@@ -1,4 +1,5 @@
 import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 import {
   dashboardIcon,
   maintenanceIcon,
@@ -9,43 +10,76 @@ import {
 } from "../../assets/images";
 
 const Sidebar: React.FC = () => {
+  function closeSidebar() {
+    document.body.classList.remove("open-sidebar");
+  }
   return (
     <Nav className="sidebar">
       <Nav.Item>
-        <Nav.Link href="/dashboard" title="Dashboard" className="active">
+        <NavLink
+          to="/dashboard"
+          title="Dashboard"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={dashboardIcon} alt="Dashboard" />
           <span>Dashboard</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="/innerpage" title="User">
+        <NavLink
+          to="/innerpage"
+          title="User"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={userIcon} alt="User" />
           <span>User</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="#" title="Maintenance">
+        <NavLink
+          to="/"
+          title="Maintenance"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={maintenanceIcon} alt="Maintenance" />
           <span>Maintenance</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="#" title="Offers">
+        <NavLink
+          to="/"
+          title="Offers"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={offerIcon} alt="Offers" />
           <span>Offers</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="#" title="Sales">
+        <NavLink
+          to="/"
+          title="Sales"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={salesIcon} alt="Sales" />
           <span>Sales</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="#" title="Settings">
+        <NavLink
+          to="/"
+          title="Settings"
+          className="nav-link"
+          onClick={closeSidebar}
+        >
           <img src={settingsIcon} alt="Settings" />
           <span>Settings</span>
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
     </Nav>
   );

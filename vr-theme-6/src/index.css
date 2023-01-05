@@ -258,7 +258,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .btn{box-shadow: none !important; transition: all 0.3s; border-radius: 10px; font-weight: 500;font-size: 20px;line-height: 24px;text-transform: uppercase;}
 .btn-primary{background-color: #59B997 !important;border-color: #59B997 !important; padding: 14px 30px;}
 .btn-primary:hover,
-.btn-primary:focus{background-color: rgb(62, 129, 105) !important; border-color: #59B997 !important;}
+.btn-primary:focus{background-color: #3e8169 !important; border-color: #3e8169 !important;}
 .primary-icon-button{border: 1px solid #EAEAEA !important;padding: 10px 12px;}
 .primary-icon-button:hover{background-color: #e9f6f2 !important; border-color: #59B997 !important;}
 .primary-icon-button:not(.toggle-button):focus {border-color: #59B997 !important;}
@@ -380,7 +380,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
-.header{ display: flex; align-items: center; background: #FFFFFF; box-shadow: 0px 1px 19px 1px rgb(0 0 0 / 8%); padding: 20px 30px; position: fixed; top: 0; left: 0; right: 0; z-index: 3;}
+.header{ display: flex; align-items: center; background: #FFFFFF; box-shadow: 0px 1px 19px 1px rgb(0 0 0 / 8%); padding: 20px 30px; position: fixed; top: 0; left: 0; right: 0; z-index: 2;}
 .header .toggle-button{margin-right: 30px;}
 .header .logo{display: inline-block; vertical-align: middle; margin-right: 8px;}
 .header .logo img{display: block;}
@@ -400,7 +400,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
-.sidebar.nav{position: fixed; top: 96px; left: 0; bottom: 0; flex-direction: column; background-color: #59B997; width: 238px; flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 2;}
+.sidebar.nav{position: fixed; top: 96px; left: 0; bottom: 0; flex-direction: column; background-color: #59B997; width: 238px; flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
 .sidebar .nav-item:not(:last-child){margin-bottom: 5px;}
 .sidebar .nav-item .nav-link{display: flex;align-items: center; color: #FFFFFF; padding: 15px 30px; position: relative;}
 .sidebar .nav-item .nav-link img{margin-right: 10px;}
@@ -436,6 +436,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .transaction-card .transaction-amount span{ margin-left: 4px; }
 .action-menu .btn{background-color: transparent !important; padding: 6px; border: none !important; border-radius: 50%;}
 .action-menu .btn::after{display: none;}
+.action-menu .btn:hover, .action-menu .btn:focus{background-color: rgba(0, 0, 0, 0.05) !important;}
 .action-menu .btn img{display: block;}
 .sales-progress { padding-top: 8px; }
 .sales-progress li:not(:last-child) { padding-bottom: 27px; }
@@ -499,10 +500,11 @@ input[type="search"]::-webkit-search-results-decoration {
     .login-wrapper .login-main .sign-up-link { padding: 30px 0; }
     .main-content{margin-left: 0; width: 100%; padding: 108px 20px 20px;}
     .open-sidebar{overflow: hidden;}
-    .sidebar.nav{left: -238px; top: 88px;}
+    .sidebar.nav{left: -238px; top: 0;}
     .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
     .open-sidebar .sidebar{left: 0;}
     .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
+    .open-sidebar .overlay{z-index: 3;}
     .header{padding: 20px;}
     .header .toggle-button{margin-right: 20px;}
     .header .search-toggle{padding: 13px 15px;}
@@ -518,7 +520,9 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width:767px) {
     h2{font-size: 40px; line-height: 46px;}
     h3{font-size: 26px; line-height: 30px;}
-    .btn-primary,.btn-outline-primary{padding: 12px;}
+    .btn{font-size: 16px; line-height: 20px;}
+    .btn-primary{padding: 10px 24px;}
+    .btn-outline-primary{padding: 9px 24px;}
     .header .search-toggle{padding: 11px;}
     .login-hero{padding: 20px;}
     .main-content{padding: 100px 16px 16px;}
@@ -530,7 +534,6 @@ input[type="search"]::-webkit-search-results-decoration {
     .header .user-profile .btn{margin-left: 5px;}
     .header .toggle-button{margin-right: 10px;}
     .header .logo img{height: 36px; width: 36px;}
-    .sidebar.nav{top: 80px;}
     .statistic-card{padding: 16px;}
     .statistic-card h3{padding-bottom: 8px;}
     .custom-card{padding: 16px;}
