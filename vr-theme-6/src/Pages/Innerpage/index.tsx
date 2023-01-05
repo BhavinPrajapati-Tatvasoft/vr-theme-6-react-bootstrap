@@ -53,13 +53,14 @@ const Innerpage = () => {
 
             <FloatingLabel
               controlId="multilineInput"
-              label="Multiple  line"
-
+              label="Multiple line"
+              className="multiline-block"
             >
               <Form.Control
                 type="text"
                 placeholder="Multiple line"
                 as="textarea"
+                rows={4}
               />
             </FloatingLabel>
             {/* -------- first column end ---------  */}
@@ -107,6 +108,7 @@ const Innerpage = () => {
                     type="text"
                     placeholder="Error"
                     value="Web Designer"
+                    className="is-invalid"
                   />
                 </FloatingLabel>
               </Col>
@@ -201,6 +203,7 @@ const Innerpage = () => {
                     type="text"
                     placeholder="Error"
                     value="Web Designer"
+                    className="is-invalid"
                   />
                 </FloatingLabel>
               </Col>
@@ -294,31 +297,38 @@ const Innerpage = () => {
 
 
             {/* -------- Tabs start ---------  */}
-            <h5>Tabs</h5>
-            {/* <Tabs
-              defaultActiveKey="home"
-              id="uncontrolled-tab-example"
-              
-            >
-              <Tab eventKey="home" title="Home">
-                It is a long established fact that a reader will be distracted by the readable content of
-                a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                like readable English. Many desktop publishing
-                packages and web page editors now use Lorem Ipsum
-                as their default model text, and a search for 'lorem ipsum' will
-                uncover many web sites still in their infancy.
-              </Tab>
-              <Tab eventKey="profile" title="Profile">
-                Tab Content 2
-              </Tab>
-              <Tab eventKey="contact" title="Contact">
-                It is a long established fact that a reader will be distracted by the readable content of
-                a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                like readable English. Many desktop publishing
-              </Tab>
-            </Tabs> */}
+            <div className="tab-container">
+              <h5>Tabs</h5>
+              <Tabs
+                defaultActiveKey="tab1"
+                id="tabExample"
+              >
+                <Tab eventKey="tab1" title="Tab 1">
+                  It is a long established fact that a reader will be distracted by the readable content of
+                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                  like readable English. Many desktop publishing
+                  packages and web page editors now use Lorem Ipsum
+                  as their default model text, and a search for 'lorem ipsum' will
+                  uncover many web sites still in their infancy.
+                </Tab>
+                <Tab eventKey="tab2" title="Tab 2">
+                  Tab Content 2
+                </Tab>
+                <Tab eventKey="tab3" title="Tab 3">
+                  It is a long established fact that a reader will be distracted by the readable content of
+                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                  like readable English. Many desktop publishing
+                </Tab>
+                <Tab eventKey="tab4" title="Tab 4">
+                  It is a long established fact that a reader will be distracted by the readable content of
+                  a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                  like readable English. Many desktop publishing
+                </Tab>
+              </Tabs>
+            </div>
             {/* -------- Tabs send ---------  */}
           </div>
         </div>
