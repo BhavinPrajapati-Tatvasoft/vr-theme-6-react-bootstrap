@@ -33,3 +33,7 @@ export const maintenanceIcon = require("./maintenance-ic.svg").default;
 export const offerIcon = require("./offer-ic.svg").default;
 export const salesIcon = require("./sales-ic.svg").default;
 export const settingsIcon = require("./settings-ic.svg").default;
+export const barChartIcon = require("./bar-chart-icon.svg").default;
+export const keyIcon = require("./key-ic.svg").default;
+export const moneyCoinIcon = require("./money-coin-ic.svg").default;
+export const walletIcon = require("./wallet-ic.svg").default;

@@ -7,12 +7,18 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import { alertErrorIcon, alertInfoIcon, alertSuccessIcon, alertWarningIcon, hidePasswordIcon, uploadIcon } from "../../assets/images";
+import {
+  alertErrorIcon,
+  alertInfoIcon,
+  alertSuccessIcon,
+  alertWarningIcon,
+  hidePasswordIcon,
+  uploadIcon,
+} from "../../assets/images";
 import { Alert } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/esm/Tabs";
 import Tab from 'react-bootstrap/Tab';
-
 
 const Innerpage = () => {
   return (
@@ -50,7 +56,11 @@ const Innerpage = () => {
               label="Multiple  line"
 
             >
-              <Form.Control type="text" placeholder="Multiple line" as="textarea" />
+              <Form.Control
+                type="text"
+                placeholder="Multiple line"
+                as="textarea"
+              />
             </FloatingLabel>
             {/* -------- first column end ---------  */}
 
@@ -93,7 +103,11 @@ const Innerpage = () => {
                   label="Error"
 
                 >
-                  <Form.Control type="text" placeholder="Error" value="Web Designer" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Error"
+                    value="Web Designer"
+                  />
                 </FloatingLabel>
               </Col>
             </Row>
@@ -118,7 +132,12 @@ const Innerpage = () => {
                   label="Disabled"
 
                 >
-                  <Form.Control type="text" placeholder="Disabled" value="John Doe" disabled />
+                  <Form.Control
+                    type="text"
+                    placeholder="Disabled"
+                    value="John Doe"
+                    disabled
+                  />
                 </FloatingLabel>
               </Col>
 
@@ -178,12 +197,15 @@ const Innerpage = () => {
                   label="Error"
 
                 >
-                  <Form.Control type="text" placeholder="Error" value="Web Designer" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Error"
+                    value="Web Designer"
+                  />
                 </FloatingLabel>
               </Col>
             </Row>
             {/* -------- four column end ---------  */}
-
 
             {/* -------- other design start ---------  */}
             <div className="other-design">

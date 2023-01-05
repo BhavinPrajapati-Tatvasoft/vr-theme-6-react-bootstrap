@@ -10,10 +10,7 @@ import {
 
 const Sidebar: React.FC = () => {
   return (
-    <Nav
-      activeKey="/home"
-      onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-    >
+    <Nav className="sidebar">
       <Nav.Item>
         <Nav.Link href="/dashboard" title="Dashboard" className="active">
           <img src={dashboardIcon} alt="Dashboard" />
