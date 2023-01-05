@@ -288,7 +288,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-control.is-invalid:focus~label{color: #FF3232;}
 .multiline-block{height: auto;}
 .multiline-block .form-control{min-height: 106px;}
-.multiline-block .form-control~label{height: auto;background-color: #FFFFFF;z-index: 1;}
+.multiline-block .form-control~label{height: auto;background-color: #FFFFFF;}
 
 /* Password Field
 --------------------------------------------------------------------------------------------------------*/
@@ -504,6 +504,7 @@ input[type="search"]::-webkit-search-results-decoration {
     .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
     .open-sidebar .sidebar{left: 0;}
     .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
+    .show-searchbar .overlay{z-index: 2;}
     .open-sidebar .overlay{z-index: 3;}
     .header{padding: 20px;}
     .header .toggle-button{margin-right: 20px;}
@@ -523,6 +524,7 @@ input[type="search"]::-webkit-search-results-decoration {
     .btn{font-size: 16px; line-height: 20px;}
     .btn-primary{padding: 10px 24px;}
     .btn-outline-primary{padding: 9px 24px;}
+    .primary-icon-button{padding: 8px;}
     .header .search-toggle{padding: 11px;}
     .login-hero{padding: 20px;}
     .main-content{padding: 100px 16px 16px;}
