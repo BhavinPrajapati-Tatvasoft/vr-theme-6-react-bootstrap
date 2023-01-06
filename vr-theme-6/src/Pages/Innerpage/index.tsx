@@ -77,16 +77,12 @@ const Innerpage = () => {
             <h5>Two Column</h5>
             <Row className="custom-row">
               <Col md={6}>
-                <FloatingLabel controlId="floatingInput" label="Username">
+                <FloatingLabel label="Username">
                   <Form.Control type="text" placeholder="Username" />
                 </FloatingLabel>
               </Col>
               <Col md={6}>
-                <FloatingLabel
-                  controlId="floatingPassword"
-                  label="Password"
-                  className="password-wrapper "
-                >
+                <FloatingLabel label="Password" className="password-wrapper ">
                   <Form.Control type="password" placeholder="Password" />
                   <button className="btn icon-wrapper">
                     <img src={hidePasswordIcon} alt="Hide Password" />
@@ -103,7 +99,7 @@ const Innerpage = () => {
                   <Form.Control
                     type="text"
                     placeholder="Error"
-                    value="Web Designer"
+                    defaultValue="Web Designer"
                     className="is-invalid"
                   />
                 </FloatingLabel>
@@ -125,7 +121,7 @@ const Innerpage = () => {
                   <Form.Control
                     type="text"
                     placeholder="Disabled"
-                    value="John Doe"
+                    defaultValue="John Doe"
                     disabled
                   />
                 </FloatingLabel>
@@ -180,7 +176,7 @@ const Innerpage = () => {
                   <Form.Control
                     type="text"
                     placeholder="Error"
-                    value="Web Designer"
+                    defaultValue="Web Designer"
                     className="is-invalid"
                   />
                 </FloatingLabel>
@@ -193,14 +189,13 @@ const Innerpage = () => {
               <h5>Other Design elements</h5>
               <h6>File Upload</h6>
               <div className="file-upload-main">
-                <div className="relative">
+                <div className="position-relative">
                   <input
                     type="file"
                     name="Upload"
                     id="upload"
                     placeholder="Upload"
                   />
-
                   <div className="file-content">
                     <img src={uploadIcon} alt="Upload Icon" />
                     <h4>Upload</h4>
@@ -216,6 +211,7 @@ const Innerpage = () => {
                   label="Selected"
                   name="group1"
                   type={"checkbox"}
+                  defaultChecked
                   id={`inline-check-1`}
                 />
                 <Form.Check
@@ -234,6 +230,7 @@ const Innerpage = () => {
                   label="Selected"
                   name="group1"
                   type={"radio"}
+                  defaultChecked
                   id={`inline-radio-1`}
                 />
                 <Form.Check
@@ -242,7 +239,6 @@ const Innerpage = () => {
                   name="group1"
                   type={"radio"}
                   id={`inline-radio-2`}
-                  checked
                 />
               </div>
 
