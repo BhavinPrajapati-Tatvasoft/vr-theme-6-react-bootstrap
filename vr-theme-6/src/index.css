@@ -499,7 +499,6 @@ input[type="search"]::-webkit-search-results-decoration {
     h2{font-size: 40px; line-height: 46px;}
     .login-wrapper .login-container { display: block; }
     .login-hero { padding: 40px; }
-    /* .login-container .row{height: auto;} */
     .login-wrapper .login-logo { margin: 0 auto; }
     .login-wrapper .login-main { padding: 30px; height: calc(100vh - 118px);}
     .login-wrapper .form-wrapper { max-width: 450px; margin: 0 auto; min-height: calc(100vh - 218px); }
