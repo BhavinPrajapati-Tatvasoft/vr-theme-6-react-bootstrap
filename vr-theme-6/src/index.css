@@ -337,10 +337,11 @@ input[type="search"]::-webkit-search-results-decoration {
 /* Tabs
 --------------------------------------------------------------------------------------------------------*/
 .tab-container h5{padding-bottom: 10px;}
-.nav-tabs .nav-item .nav-link{padding: 10px 8px 18px;border: 0; border-bottom: 1px solid #E9E9E9;font-weight: 300;font-size: 18px;line-height: 20px;color: #9C9C9C; transition: all 300ms ease; position: relative;}
-.nav-tabs .nav-item .nav-link::after{content: '';position: absolute; display: block;height: 3px;width: 100%;background-color: transparent;bottom: -2px;left: 0;right: 0; transition: all 300ms ease;}
+.nav-tabs{padding-bottom: 8px;}
+.nav-tabs .nav-item .nav-link{padding: 10px 8px;border: 0;font-weight: 300;font-size: 18px;line-height: 20px;color: #9C9C9C; transition: all 300ms ease; position: relative;}
+.nav-tabs .nav-item .nav-link::after{content: '';position: absolute; display: block;height: 3px;width: 100%;background-color: transparent;bottom: -9px;left: 0;right: 0; transition: all 300ms ease;}
 .nav-tabs .nav-link.active{font-weight: 500;color: #3EAE86}
-.nav-tabs .nav-link.active::after{background-color: #3EAE86}
+.nav-tabs .nav-link.active::after, .nav-tabs .nav-link:focus:after{background-color: #3EAE86}
 .tab-content{line-height: 24px; padding-top: 24px;}
 .nav-tabs .nav-item:not(:last-child){margin-right: 24px;}
 .nav-tabs .nav-item .nav-link:not(.active):hover,
@@ -501,7 +502,7 @@ input[type="search"]::-webkit-search-results-decoration {
     .login-wrapper .login-container { display: block; }
     .login-hero { padding: 40px; }
     .login-wrapper .login-logo { margin: 0 auto; }
-    .login-wrapper .login-main { padding: 30px; height: calc(100vh - 118px);}
+    .login-wrapper .login-main { padding: 30px; min-height: calc(100vh - 118px);}
     .login-wrapper .form-wrapper { max-width: 450px; margin: 0 auto; min-height: calc(100vh - 218px); }
     .login-wrapper .form-wrapper .mobile-logo { display: block; padding-bottom: 40px; width: max-content; }
     .login-wrapper .login-main h2 { text-align: center; justify-content: center; font-size: 40px; line-height: 46px; }
@@ -539,7 +540,7 @@ input[type="search"]::-webkit-search-results-decoration {
     .primary-icon-button{padding: 8px;}
     .header .search-toggle{padding: 11px;}
     .login-hero{padding: 20px;}
-    .login-wrapper .login-main{height: calc(100vh - 78px);}
+    .login-wrapper .login-main{min-height: calc(100vh - 78px);}
     .main-content{padding: 100px 16px 16px;}
     .page-title{padding-bottom: 16px;}
     .header{padding: 16px;}
