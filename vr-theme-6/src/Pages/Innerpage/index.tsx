@@ -11,6 +11,7 @@ import {
   alertSuccessIcon,
   alertWarningIcon,
   hidePasswordIcon,
+  showPasswordIcon,
   uploadIcon,
 } from "../../assets/images";
 import { Alert } from "react-bootstrap";
@@ -36,6 +37,10 @@ const Innerpage = () => {
       { y: 0, opacity: 1, stagger: 0.3 }
     );
   }, []);
+
+  // Password States
+  const [showPassword, setShowPassword] = React.useState(true);
+  const [showPassword1, setShowPassword1] = React.useState(true);
   return (
     <>
       <Helmet>
@@ -83,9 +88,18 @@ const Innerpage = () => {
               </Col>
               <Col md={6}>
                 <FloatingLabel label="Password" className="password-wrapper ">
-                  <Form.Control type="password" placeholder="Password" />
-                  <button className="btn icon-wrapper">
-                    <img src={hidePasswordIcon} alt="Hide Password" />
+                  <Form.Control
+                    type={showPassword ? "password" : "text"}
+                    placeholder="Password"
+                  />
+                  <button
+                    className="btn icon-wrapper"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    <img
+                      src={showPassword ? hidePasswordIcon : showPasswordIcon}
+                      alt={showPassword ? "Show Password" : "Hide Password"}
+                    />
                   </button>
                 </FloatingLabel>
               </Col>
@@ -154,9 +168,18 @@ const Innerpage = () => {
                   label="Password"
                   className="password-wrapper "
                 >
-                  <Form.Control type="password" placeholder="Password" />
-                  <button className="btn icon-wrapper">
-                    <img src={hidePasswordIcon} alt="Hide Password" />
+                  <Form.Control
+                    type={showPassword1 ? "password" : "text"}
+                    placeholder="Password"
+                  />
+                  <button
+                    className="btn icon-wrapper"
+                    onClick={() => setShowPassword1(!showPassword1)}
+                  >
+                    <img
+                      src={showPassword1 ? hidePasswordIcon : showPasswordIcon}
+                      alt={showPassword1 ? "Show Password" : "Hide Password"}
+                    />
                   </button>
                 </FloatingLabel>
               </Col>

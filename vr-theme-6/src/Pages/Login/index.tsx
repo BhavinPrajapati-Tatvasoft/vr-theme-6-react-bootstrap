@@ -5,7 +5,12 @@ import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 import Row from "react-bootstrap/esm/Row";
 import { Helmet } from "react-helmet";
 import { Link, NavLink } from "react-router-dom";
-import { hidePasswordIcon, loginMockup, LogoWhite } from "../../assets/images";
+import {
+  hidePasswordIcon,
+  loginMockup,
+  LogoWhite,
+  showPasswordIcon,
+} from "../../assets/images";
 import Form from "react-bootstrap/Form";
 import gsap from "gsap";
 import { Typewriter } from "react-simple-typewriter";
@@ -22,6 +27,8 @@ const Login = () => {
     );
   }, []);
 
+  // Password States
+  const [showPassword, setShowPassword] = React.useState(true);
   return (
     <>
       <Helmet>
@@ -30,6 +37,7 @@ const Login = () => {
       <section className="login-wrapper">
         <Container className="login-container" fluid>
           <Row>
+            {/* Login Banner */}
             <Col lg={7} className="login-hero">
               <div className="login-content">
                 <Link to="#" className="login-logo" title="Company">
@@ -57,6 +65,8 @@ const Login = () => {
                 </p>
               </div>
             </Col>
+
+            {/* Login Form */}
             <Col lg={5} className="login-main">
               <div className="form-wrapper">
                 <form>
@@ -85,9 +95,19 @@ const Login = () => {
                     label="Password"
                     className="password-wrapper"
                   >
-                    <Form.Control type="password" placeholder="Password" />
-                    <button className="btn icon-wrapper" type="button">
-                      <img src={hidePasswordIcon} alt="Hide Password" />
+                    <Form.Control
+                      type={showPassword ? "password" : "text"}
+                      placeholder="Password"
+                    />
+                    <button
+                      className="btn icon-wrapper"
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      <img
+                        src={showPassword ? hidePasswordIcon : showPasswordIcon}
+                        alt={showPassword ? "Show Password" : "Hide Password"}
+                      />
                     </button>
                   </FloatingLabel>
 
