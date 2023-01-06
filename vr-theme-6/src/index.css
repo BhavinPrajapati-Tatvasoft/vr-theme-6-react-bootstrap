@@ -415,6 +415,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .sidebar .nav-item .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: #4CC59A; transition: all 300ms ease; z-index: -1;}
 .sidebar .nav-item .nav-link:hover::after { width: 100%;}
 .sidebar .nav-item .nav-link.active{background-color: #4CC59A;}
+.sidebar .nav-item .nav-link:not(.active):focus { background-color: rgba(0, 0, 0, 0.08); }
 .open-sidebar .sidebar{left: -238px;}
 
 /* Dashboard
